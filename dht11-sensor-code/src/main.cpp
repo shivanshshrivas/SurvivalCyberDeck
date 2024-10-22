@@ -13,7 +13,7 @@ int main() {
 
     dht11 sensor;
     while(1){
-        cout << "Error code: " << sensor.read(7) << endl;
+        cout << "Error code: " << sensor.read(15) << endl;
         cout << "Temperature: " << sensor.temperature << " *C" << endl;
         cout << "Humidity: " << sensor.humidity << " %" << endl;
         cout << "-----------------" << endl;

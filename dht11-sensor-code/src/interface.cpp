@@ -1,7 +1,10 @@
 #include <stdint.h>
+#include <iostream>
 
 #include "wiringPi.h"
 #include "interface.h"
+
+using namespace std;
 
 // Return values:
 // DHTLIB_OK
@@ -28,10 +31,12 @@ int dht11::read(int pin)
 	// ACKNOWLEDGE or TIMEOUT
 	unsigned int loopCnt = 10000;
 	while(digitalRead(pin) == LOW)
+		//cout<<"Ack Low";
 		if (loopCnt-- == 0) return DHTLIB_ERROR_TIMEOUT;
 
 	loopCnt = 10000;
 	while(digitalRead(pin) == HIGH)
+		//cout<<"Ack High";
 		if (loopCnt-- == 0) return DHTLIB_ERROR_TIMEOUT;
 
 	// READ OUTPUT - 40 BITS => 5 BYTES or TIMEOUT
@@ -39,12 +44,14 @@ int dht11::read(int pin)
 	{
 		loopCnt = 10000;
 		while(digitalRead(pin) == LOW)
+			//cout<<"Read Low";
 			if (loopCnt-- == 0) return DHTLIB_ERROR_TIMEOUT;
 
 		unsigned long t = micros();
 
 		loopCnt = 10000;
 		while(digitalRead(pin) == HIGH)
+			//cout<<"Read High";
 			if (loopCnt-- == 0) return DHTLIB_ERROR_TIMEOUT;
 
 		if ((micros() - t) > 40) bits[idx] |= (1 << cnt);
