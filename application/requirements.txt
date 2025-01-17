@@ -1,0 +1,6 @@
+
+
+$ winget install Git.Git
+$ winget install 9NCVDN91XZQP 
+$ pip install PyQt5
+
