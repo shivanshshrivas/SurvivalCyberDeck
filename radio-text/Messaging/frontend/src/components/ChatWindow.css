@@ -1,0 +1,35 @@
+.chat-window {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+.no-chat {
+    text-align: center;
+    opacity: 0.8;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    color: beige;
+}
+
+.no-chat h2 {
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.no-chat p {
+    font-size: 20px;
+    font-weight: 250;
+    margin: 0;
+}
+
+.chat-content {
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.9;
+}
