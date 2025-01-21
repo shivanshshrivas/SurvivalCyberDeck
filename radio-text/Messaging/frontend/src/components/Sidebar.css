@@ -1,0 +1,91 @@
+.sidebar {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: white;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+    background: none;
+    border-left: #000000;
+}
+
+.sidebar.expanded {
+    width: 250px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Top icons */
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.sidebar.expanded .sidebar-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: fit-content;
+}
+
+.sidebar-top .icon {
+    font-size: 20px;
+    margin: 2px 0;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 15px;
+}
+
+.sidebar-top .icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon {
+    color: #e1e1e1;
+}
+
+/* Menu List */
+.menu {
+    list-style: none;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start ;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.menu li svg {
+    margin-right: 10px;
+}
+
+.separator {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2); /* Subtle white separator */
+    margin: 5px 0;
+}
