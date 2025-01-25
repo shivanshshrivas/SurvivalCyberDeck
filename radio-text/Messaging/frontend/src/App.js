@@ -5,11 +5,12 @@ import "./App.css";
 
 function App() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [selectedChat, setSelectedChat] = useState(null);
 
     return (
         <div className="app-container">
-            <Sidebar isOpen={isSidebarOpen} toggle={() => setIsSidebarOpen(!isSidebarOpen)} />
-            <ChatWindow selectedChat={null} />
+            <Sidebar isOpen={isSidebarOpen} toggle={() => setIsSidebarOpen(!isSidebarOpen)} onSelectChat={setSelectedChat} />
+            <ChatWindow selectedChat={selectedChat} />
         </div>
     );
 }
