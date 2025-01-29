@@ -11,6 +11,10 @@ export default {
         inter: ["-apple-system", "Inter"],
         roboto: ["-apple-system", "Roboto"],
         pro: ["Source Code Pro", "monospace"],
+      },
+      boxShadow: {
+        'custom-light': '0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06)',
+        'custom-dark': '1px 1px 15px 0px rgba(167, 165, 165, 0.7)',
       }
     },
   },
