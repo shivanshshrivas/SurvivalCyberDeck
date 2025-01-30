@@ -22,7 +22,7 @@ export default function Sidebar () {
     }
 
     return (
-        <div className="flex items-center justify-start h-screen mr-5">
+        <div className="flex items-center justify-start h-full mr-5">
             <div 
                 className={`sidebar text-white px-2 pt-4 flex flex-col items-start justify-start h-full`}   
                 >
