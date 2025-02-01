@@ -1,9 +1,11 @@
 .app-container {
   background-image: url('./assets/dark.png');
-  height: 100vh;
   background-size: cover;
   background-position: center;
+  height: 100vh;
   position: relative;
   filter: saturate(0.66);
   display: flex;
+  /* display: grid;
+  grid-template-columns: 1fr 19fr; */
 }

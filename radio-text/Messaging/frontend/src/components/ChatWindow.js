@@ -6,7 +6,11 @@ const chatMessages = {
         { id: 1, sender: "Ansuman Sharma", text: "Hi there, this is a test if my radio module is working, can anyone see it? cewijdu    cviuwebciu  ebiu hcuhewuhcewiuhciuewhuichewiuhciuew hu huiv hewiuhc iuewhc iuehwuc ewguhewiucgeqwiucgigewivgqweicugiewlug iucewgil ugcliewugcliuqgweulicvgqlkug weuci   ", timestamp: "18-01-2025 16:44" },
         { id: 2, sender: "Leo Cabezas", text: "Yes, I can see it. Good job Shivansh on the module!", timestamp: "18-01-2025 16:45" },
         { id: 3, sender: "Shivansh", text: "I'm goated like that! s is a test if my radio module is working, can anyone see it? cewijdu    cviuwebciu  ebiu hcuhewuhcewiuhciuewhuichewiuhciuew hu huiv hewiuhc iuewhc iuehwuc ewguhewiucgeqwiucgigewivgqweicugiewlug iucewgil ugcliewugcliuqgweulicvgqlkug weuci  ", timestamp: "18-01-2025 16:46", self: true },
-        {id: 4, sender: "Ansuman Sharma", text: "Nigeria!", timestamp: "18-01-2025 16:47" }
+        {id: 4, sender: "Ansuman Sharma", text: "Nigeria!", timestamp: "18-01-2025 16:47" },
+        { id: 5, sender: "Ansuman Sharma", text: "Hi there, this is a test if my radio module is working, can anyone see it? cewijdu    cviuwebciu  ebiu hcuhewuhcewiuhciuewhuichewiuhciuew hu huiv hewiuhc iuewhc iuehwuc ewguhewiucgeqwiucgigewivgqweicugiewlug iucewgil ugcliewugcliuqgweulicvgqlkug weuci   ", timestamp: "18-01-2025 16:44" },
+        { id: 6, sender: "Leo Cabezas", text: "Yes, I can see it. Good job Shivansh on the module!", timestamp: "18-01-2025 16:45" },
+        { id: 7, sender: "Shivansh", text: "I'm goated like that! s is a test if my radio module is working, can anyone see it? cewijdu    cviuwebciu  ebiu hcuhewuhcewiuhciuewhuichewiuhciuew hu huiv hewiuhc iuewhc iuehwuc ewguhewiucgeqwiucgigewivgqweicugiewlug iucewgil ugcliewugcliuqgweulicvgqlkug weuci  ", timestamp: "18-01-2025 16:46", self: true },
+        {id: 8, sender: "Ansuman Sharma", text: "Nigeria!", timestamp: "18-01-2025 16:47" }
     ],
     "Ansuman Sharma": [
         { id: 1, sender: "Ansuman Sharma", text: "Hey, how's it going?", timestamp: "18-01-2025 14:30" },
@@ -23,20 +27,24 @@ function ChatWindow({ selectedChat }) {
         <div className="chat-window">
             {selectedChat ? (
                 <div className="chat-content">
-                    <h2>{selectedChat.name}</h2>
-                    <div className="messages">
-                        {chatMessages[selectedChat.name] ? chatMessages[selectedChat.name].map(msg => (
-                            <div key={msg.id} className={`message ${msg.self ? "self" : ""}`}>
-                                <p className="sender">{msg.sender} <span className="timestamp">{msg.timestamp}</span></p>
-                                <p className="text">{msg.text}</p>
-                            </div>
-                        )) : (
-                            <p>No messages yet.</p>
-                        )}
+                    <div className="chat-header">
+                        <h2>{selectedChat.name}</h2>
                     </div>
-                    <div className="chat-input">
-                        <input type="text" placeholder="Enter your message here ..." />
-                        <button>➤</button>
+                    <div className="chat-messages">
+                        <div className="messages">
+                            {chatMessages[selectedChat.name] ? chatMessages[selectedChat.name].map(msg => (
+                                <div key={msg.id} className={`message ${msg.self ? "self" : ""}`}>
+                                    <p className="sender">{msg.sender} <span className="timestamp">{msg.timestamp}</span></p>
+                                    <p className="text">{msg.text}</p>
+                                </div>
+                            )) : (
+                                <p>No messages yet.</p>
+                            )}
+                        </div>
+                        <div className="chat-input">
+                            <input type="text" placeholder="Type a message..." />
+                            <button>➤</button>
+                        </div>
                     </div>
                 </div>
             ) : (

@@ -1,10 +1,11 @@
 .chat-window {
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
     color: white;
     font-size: 18px;
     position: relative;
+    overflow-y: auto;
 }
 
 /* No Chat Selected State */
@@ -35,17 +36,48 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
     opacity: 0.9;
+    overflow-y: auto;
+}
+
+.chat-header {
+    position: sticky;
+    margin: 0 5%;
+    top: 0;
+    padding: 0 20px;
+    z-index: 40;
+}
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent; /* For Firefox */
+
+    &::-webkit-scrollbar {
+        width: 6px; /* For Chrome, Safari, and Opera */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2); /* For Chrome, Safari, and Opera */
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent; /* For Chrome, Safari, and Opera */
+    }
 }
 
 /* Chat Messages Section */
 .messages {
-    flex: 1;
-    overflow-y: auto;
+    margin: 0 5%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     padding-bottom: 10px;
+    align-self: stretch;
+
 }
 
 /* Individual Chat Messages */
@@ -76,6 +108,8 @@
     align-self: flex-end;
 }
 
+
+
 /* Styling for Other User Messages */
 .message:not(.self) {
     background: rgba(255, 255, 255, 0.15);
@@ -93,11 +127,15 @@
 /* Chat Input Box */
 .chat-input {
     display: flex;
+    width: 90%;
+    position: sticky;
+    bottom: 5px;
     align-items: center;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    margin-top: 10px;
+    border-radius: 100px;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Input Field */
@@ -108,7 +146,7 @@
     background: rgba(255, 255, 255, 0.1);
     color: white;
     outline: none;
-    border-radius: 5px;
+    border-radius: 100px;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
@@ -120,7 +158,7 @@
     padding: 10px 15px;
     cursor: pointer;
     margin-left: 10px;
-    border-radius: 5px;
+    border-radius: 100px;
     font-size: 18px;
     color: white;
 }
