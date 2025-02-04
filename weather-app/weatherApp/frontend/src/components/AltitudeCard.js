@@ -1,22 +1,19 @@
-import weathericon from '../assets/humidity.png'
+import weathericon from '../assets/altitude.png'
 
 export default function Card () {
     return (
-        <div className='flex flex-1'>
-            <div className="card bg-[#ffffff80] backdrop-blur-xl border border-[#d9d9d9] shadow-custom-dark rounded-lg m-[5px] p-5">
+        <div className = 'flex flex-1'>
+            <div className="card bg-[#ffffff80] backdrop-blur-xl border border-[#d9d9d9] shadow-custom-dark rounded-lg h-[50] m-[5px] p-5">
                 <div className="card-header flex justify-start w-full">
-                    <h1 className="card-title font-poppins text-2xl">Humidity</h1>
+                    <h1 className="card-title font-poppins text-2xl">Altitude</h1>
                 </div>
-                <div className="card-body flex flex-col items-center justify-start">
+                <div className="card-body flex flex-col items-center justify-stretch">
                     <div className = {'weather-details flex flex-row justify-start w-full'}>
                         <img src={weathericon} alt="weather-icon" className="w-1/2 h-1/2"/>
                         <div className="weather-info flex flex-col items-start justify-center">
                             <h1 className="font-poppins text-5xl">
-                                16%
+                                140 m
                             </h1>
-                            <p className='font-poppins text-2xl'>
-                                Humid
-                            </p>
                         </div>
                     </div>
                 </div>
