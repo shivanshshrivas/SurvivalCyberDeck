@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex h-screen">
         
-      <div className="flex flex-col justify-start items-center border-l-2 border-l-[#d9d9d9] pl-2 h-full overflow-y-auto">
+      <div className="flex flex-col justify-start items-center border-l-[1px] border-l-[#bfbfbf] my-4 pl-2 overflow-y-auto">
         <div className="flex flex-row justify-start items-end w-4/5 px-2 ">
             <img src={globe} className="w-[25px] h-[25px]" alt="globe" />
             <p className="mx-2 mt-5 font-poppins text-xl">

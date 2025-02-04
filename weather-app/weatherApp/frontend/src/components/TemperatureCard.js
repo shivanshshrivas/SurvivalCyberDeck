@@ -3,7 +3,7 @@ import weathericon from '../assets/weather.png'
 export default function Card () {
     return (
         <div className = 'flex flex-1'>
-            <div className="card bg-[#ffffff80] backdrop-blur-xl border border-[#d9d9d9] shadow-custom-dark rounded-lg m-[5px] p-5">
+            <div className="card bg-[#e8e8e865] backdrop-blur-xl border border-[#d9d9d9] shadow-custom-dark rounded-lg m-[5px] p-5">
                 <div className="card-header flex justify-start w-full">
                     <h1 className="card-title font-poppins  text-2xl">Temperature</h1>
                 </div>
