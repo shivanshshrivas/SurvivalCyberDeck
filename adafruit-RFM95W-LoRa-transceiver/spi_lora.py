@@ -1,3 +1,17 @@
+''' 
+Connections for SPI communication (RFM95W LoRa): Raspberry Pi 5
+VIN -> 3.3V
+GND -> GND
+EN -> unused
+G0 -> unused
+SCK -> SCLK (Pin 23)
+MISO -> MISO (Pin 21)
+MOSI -> MOSI (Pin 19)
+CS -> GPIO17 (Pin 11)
+RST -> GPIO25 (Pin 22)
+'''
+
+
 import spidev
 import lgpio
 import time
